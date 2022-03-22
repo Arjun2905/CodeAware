@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-class CustomCard extends StatelessWidget {
+import '../screens/in_app_screens/contest_page.dart';
+
+class CustomTile extends StatelessWidget {
   final String contestName;
   final DateTime contestStartTime;
   final DateTime contestEndTime;
   final String status;
   final String duration;
-  final GestureTapCallback onPressed;
+  // final GestureTapCallback onPressed;
 
 
-  const CustomCard({Key? key,
+  const CustomTile({Key? key,
     required this.contestName,
-    required this.onPressed,
+    // required this.onPressed,
     required this.contestStartTime,
     required this.contestEndTime,
     required this.status,
@@ -45,9 +47,13 @@ class CustomCard extends StatelessWidget {
             Text("Duration: "+ duration),
             Row(
               children: [
-                TextButton(onPressed: onPressed, child: const Text("View Details")),
+                TextButton(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder:(context)=>const ContestPage()));
+                }, child: const Text("View Details")),
                 const Spacer(),
-                IconButton(onPressed: onPressed, icon: const Icon(Icons.alarm_add)),
+                IconButton(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder:(context)=>const ContestPage()));
+                }, icon: const Icon(Icons.alarm_add)),
               ],
             )
           ],

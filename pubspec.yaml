@@ -43,6 +43,7 @@ dependencies:
   page_transition: ^2.0.5
   introduction_screen: ^3.0.0
   google_nav_bar: ^5.0.5
+  image_picker: ^0.8.4+11
 
 dev_dependencies:
   flutter_test:
@@ -74,7 +75,14 @@ flutter:
     - assets/images/
     - assets/images/logo.png
     - assets/icons/
-    - assets/icons/googleicon.png
+    - assets/icons/atcoderIcon.png
+    - assets/icons/codechefIcon.png
+    - assets/icons/codeforcesIcon.png
+    - assets/icons/googleIcon.png
+    - assets/icons/hackerrankIcon.png
+    - assets/icons/kickstartIcon.png
+    - assets/icons/leetcodeIcon.png
+    - assets/icons/topcoderIcon.png
     - assets/Onboarding_Screens/
     - assets/Onboarding_Screens/access_data.png
     - assets/Onboarding_Screens/ratings.png
@@ -93,10 +101,6 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-   fonts:
-    - family: BalsamiqSans
-      fonts:
-        - asset: fonts/BalsamiqSans-Italic.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
@@ -118,3 +122,6 @@ flutter:
         - asset: assets/fonts/Comfortaa-Bold.ttf
         - asset: assets/fonts/Comfortaa-SemiBold.ttf
         - asset: assets/fonts/Comfortaa-Regular.ttf
+    - family: BalsamiqSans
+      fonts:
+        - asset: assets/fonts/Balsamisq/BalsamiqSans-Italic.ttf

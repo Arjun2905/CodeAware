@@ -7,7 +7,9 @@ class FireStoreServices{
 
   Future createUser(Users user) async {
     try {
-      await _usersCollectionReference.doc(user.id).set(user.toJson());
+      await _usersCollectionReference.doc(user.id).set({
+        "basic-info" : user.toJson()
+      });
     }catch(e){
       return e.toString();
     }
@@ -20,5 +22,27 @@ class FireStoreServices{
     }catch (e){
       return e.toString();
     }
+  }
+
+  Future addFavourites(Users user, Map<String,dynamic> contest) async{
+    try{
+      await _usersCollectionReference.doc(user.id).set(
+        {
+          // "favourites" :
+        }
+      );
+    }catch(e){
+      return e.toString();
+    }
+  }
+
+  Map<String,dynamic> convertToJson(Map<String,dynamic> data){
+    return{
+      'contestName' : data['contestName'],
+      'site' : data['site'],
+      'start' : data['start'],
+      'time' : data['time'],
+      'duration' : data['duration'],
+    };
   }
 }
